@@ -1,0 +1,406 @@
+/* ==========================================================*/
+/*==========================================================*/
+/*! TEOTIC® Dev™ "Script v2.0" */
+/* Este contenido esta bajo la licencia Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) */
+/* Su uso en otros proyectos, requiere de Autorización y Dar Reconocimiento al Autor! */
+/*       WWW-TEOTIC.WIXSITE.COM/PORTADA       || */
+/* ___________________________________________           || */
+/*    TODOS LOS DERECHOS RESERVADOS 2022   || */
+/*==========================================================//
+//==========================================================//
+// CONTAINER BANNER ME // CONTAINER BANNER ME /
+// CONTAINER BANNER ME // CONTAINER BANNER ME /
+// Colores de uso exclusivo */
+html:root {
+  --TEOTIC-theme-dark:#00002c;
+  --TEOTIC-theme-dark-transparent:rgba(0,0,0,0.7);
+  --TEOTIC-theme-dark-light:#0000ff;
+  --TEOTIC-theme-dark-degraded:#000066;
+  --TEOTIC-theme-dark-semidegraded:#00002c;
+  --color-red-dimmer:#A60808;
+  --color-white:#ffffff;
+  --color-transparent:rgba(0,0,0,.0);
+  --color-white-op:rgba(255, 255, 255, 0.9);
+  --color-white-ops:rgba(255, 255, 255, 0.5);
+  --color-black:#000000;
+  --color-gold:#ffD700;
+  --color-goldenrod:#DAA520;
+  --color-gold-dark:#ff911a;
+  --color-sky:rgb(0, 179, 255);
+  --color-red:#ff0000;
+  background-image:red;
+}
+/* SCROLL *//* SCROLL *//* SCROLL *//* SCROLL */
+/* SCROLL *//* SCROLL *//* SCROLL *//* SCROLL */
+html {
+/*Estilos estándar experimentales (Principalmente Firefox)*/
+    scrollbar-color: rgba(0, 0, 250, 0.8) rgba(100, 0, 0, 1.0);
+    scrollbar-width: 12px;
+}
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+html::-webkit-scrollbar {
+    width: 12px;
+    background:var(--TEOTIC-theme-dark);
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--color-white-op);
+}
+html::-webkit-scrollbar-thumb:hover {
+    background: var(--color-white-ops);
+}
+html::-webkit-scrollbar-thumb:active {
+    background: var(--color-white-op);
+}
+html::-webkit-scrollbar-track {
+    background-color: var(--TEOTIC-theme-dark);
+}
+/* SCROLL *//* SCROLL *//* SCROLL *//* SCROLL */
+
+ /* pseudo elements */
+ /*
+ ::-webkit-scrollbar              {  } ON
+ ::-webkit-scrollbar-button       {  } ON
+ ::-webkit-scrollbar-track        {  } OFF
+ ::-webkit-scrollbar-track-piece  {  } OFF Problem = 1
+ ::-webkit-scrollbar-thumb        {  } ON
+ ::-webkit-scrollbar-corner       {  } OFF
+ ::-webkit-resizer                {  } OFF Problem = 1
+*/
+ /* pseudo class selectors */
+/* :horizontal
+ :vertical
+ :decrement
+ :increment
+ :start
+ :end 
+ :double-button
+ :single-button
+ :no-button
+ :corner-present
+ :window-inactive
+ :hover que se activa cuando el mouse pasar por arriba, pero no es requerido un click.
+ :active que se activa cuando el mouse está haciendo la acción de click
+ :visited que se activa si al elemento se le hizo click al menos una vez
+*/
+/* SCROLL *//* SCROLL *//* SCROLL *//* SCROLL */
+/* Fuentes */
+/* Estas fuentes son de uso personal y cada una tiene licencia */
+/* FONTS *//* FONTS *//* FONTS */
+/* FONTS *//* FONTS *//* FONTS */
+@font-face {
+    font-family: 'Beyond';
+    src: url('/Infinite\ Beyond.ttf');
+}
+@font-face {
+    font-family: 'Beyond Italic';
+    src: url('/Fonts/Infinite Beyond/Infinite\ Beyond\ Italic.otf');
+    src: url('/Fonts/Infinite Beyond/Infinite\ Beyond\ Italic.ttf');  
+}
+/* FONTS *//* FONTS *//* FONTS */
+/* FONTS *//* FONTS *//* FONTS */
+/* Selectores */
+html, body  {
+  background: #ffffff;
+  margin: 0px;
+  width: 100%;
+  user-select: none;
+ -moz-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+/* Configuración de Selectores */
+a, abbr, acronym, address, applet, b, big, blockquote, body, button, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins, kbd, label, legend, li, nav, object, ol, p, pre, q, s, samp, section, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, title, tr, tt, u, ul, var {
+    background:transparent;
+    color:var(--color-gold);
+    border:0;
+    margin:0;
+    outline:0;
+    padding:0;
+    vertical-align: baseline;
+    direction: ltr;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.pointer {
+  cursor:pointer;
+}
+div {
+  display: block;
+}
+/* Tooltip float */
+.countpoint {
+    color: red;
+    cursor: pointer;
+}
+.countpoint:hover .tooltip {
+    display:grid;
+    
+}
+.tooltip {
+    position: absolute;
+    margin-top: 55px;
+    white-space: nowrap;
+    display:none;
+    background: #ffffcc;
+    border:1px solid black;
+    padding:5px;
+    z-index:10;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1vw;
+    font-weight:bolder;
+    letter-spacing:1px;
+    color: black;
+}
+/* Contenedor principal */
+#site-container {
+  display: inline-block;
+  width: 100%;
+}
+/* Menu */
+#menu-container {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    z-index: 1;
+    background: var(--color-red-dimmer);
+    -webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+    transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+    opacity: 0;
+}
+#menu-container {
+  opacity: 1;
+}
+#spa1 {
+    background: transparent;
+    padding: 15px;
+    display: flex;
+    width: -webkit-fill-available;
+    height: 106px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+ }
+/* Container of title *//* Container of title *//* Container of title */
+#aaa1 {
+    background: var(--TEOTIC-theme-dark);
+    width: fit-content !important;
+    height: fit-content;
+    border-radius: var(--rd,30px);
+    box-shadow: var(--shd,0px 0px 10px 0px #00002c);
+}
+#aaa1:hover {
+  background:var(--color-gold);
+  box-shadow:var(--shd,0px 0px 10px 0px #ffD700);
+}
+#aaa1:active {
+  background:var(--TEOTIC-theme-dark);
+  box-shadow:var(--shd,0px 0px 10px 0px #00002c);
+}
+#a1a1 {
+    background:transparent;
+    position:static;
+    width:fit-content;
+    text-align:center;
+}
+#title1 {
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    font-size:2.5vw;
+    -webkit-text-size-adjust: 100%;
+    font-family: Beyond;
+    color: var(--color-gold);
+    letter-spacing: 2px;
+    text-align: center;
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: end;
+    align-items: center;
+    align-content: center;
+}
+#title1:hover {
+  color:var(--TEOTIC-theme-dark);
+}
+#title1:active {
+  color:var(--color-gold);
+}
+/* Close Float */
+/* Container of MENU */
+/* menu después de esta línea */
+#space {
+  width: 450px !important;
+  height:30px;
+}
+p {
+  font-weight:bolder;
+  margin-bottom: 40px;
+}
+#loginAuth /*.pointer is enable*/ {
+    width: fit-content;
+    height: fit-content;
+    padding: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size:2vw;
+    text-align: center;
+    border:0px solid #1eff00;
+    background:var(--color-white);
+    color: var(--color-red-dimmer);
+    font-family:Arial;
+    font-weight:bolder;
+    border-radius: 30px;
+    display:grid;
+    justify-content: space-evenly;
+    justify-items: end;
+    align-items: center;
+    align-content: center;
+}
+#loginAuth:hover {
+  width:fit-content;
+  padding-left: 15px;
+  padding-right: 15px;
+  border:3px solid var(--TEOTIC-theme-dark);
+  background:var(--TEOTIC-theme-dark);
+  color:var(--color-white);
+  border-radius:10px;
+}
+#loginAuth:active {
+  width:fit-content;
+  padding:8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border:5px solid var(--color-white);
+  background:none;
+  color:var(--color-white);
+  border-radius:10px;
+}
+#user-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 25px;
+    width:30px;
+    height:10px;
+}
+#logout-hover {
+  display:none;
+}
+#logout-hover:hover {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+/* Author & Body Container */
+#gradient1 {
+    width: 100%;
+    height: 105px;
+    opacity:1;
+    background:var(--color-red-dimmer);
+}
+#author-container {
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+#loginsection {
+  background:transparent;
+}
+#lognoturl {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(2 102 22 / 60%);
+    box-shadow: 0px 0px 20px 4px #ffffff;
+    border-radius: 500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#loginurl {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background: rgb(2 102 22 / 60%);
+    box-shadow: 0px 0px 20px 4px #ffffff;
+    border-radius: 500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#loginurl:hover {
+  background: rgb(0 80 84 / 66%);
+    box-shadow: inset 15px 15px 20px 4px rgb(2 102 22 / 80%);
+}
+#loginurl:active {
+  background: rgb(133 92 1 / 75%);
+    box-shadow: -15px 15px 20px 4px rgb(0 243 255 / 80%);
+}
+#loginSpan1 {
+  display:grid;
+}
+#loginimage {
+  width:256px;
+  height:256px;
+  border-radius:256px;
+  user-select: none;
+ -moz-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
+}
+#loginSpan2 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+/*
+section{
+    height:100vh;
+    width: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed / contain;
+    background-attachment: scroll / fixed;
+}
+.image-1 {
+  background-image: url("");
+}*/
+/* Select Container *//* Select Container */
+/* Select Container *//* Select Container */
+/* CONTAINER BANNER ME *//* CONTAINER BANNER ME */
+/* CONTAINER BANNER ME *//* CONTAINER BANNER ME */
+//==========================================================//
+//==========================================================//
+/*! TEOTIC® Dev™ "Script v2.0" */
+/* Este contenido esta bajo la licencia Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) */
+/** Su uso en otros proyectos, requiere de Autorización y Dar Reconocimiento al Autor! */
+/*       WWW-TEOTIC.WIXSITE.COM/PORTADA       || */
+/* ___________________________________________           || */
+/*    TODOS LOS DERECHOS RESERVADOS 2022   || */
+//==========================================================//
+//==========================================================//
