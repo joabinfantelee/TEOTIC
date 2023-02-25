@@ -14,7 +14,7 @@ Su uso en otros proyectos, requiere de Autorización y Dar Reconocimiento al Aut
 */
 /* Al cargar, sincronizar datos de inicio de sesión */
     async function onreload() {
-      const requestURL = '/__replauthuser';
+      const requestURL = '/Example-of-File.JSON';
       const request = new Request(requestURL);
       const response = await fetch(request);
       const loginAuthText = await response.text();
