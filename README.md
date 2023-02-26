@@ -9,3 +9,4 @@ Cada carpeta después de la Carpeta Matriz (TEOTIC), son proyectos desarrollados
 Si desea apoyar nuestro trabajo, puede enviar ciclos en el Replit: https://replit.com/@ProGamerJoab-YT/ProGamerJoab-YT
 
 Si desea apoyar de otro modo, podrá seguirnos en nuestras redes: https://www-teotic.wixsite.com/links
+>.
